@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_group_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".AddGroupActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:elevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <LinearLayout
+            android:background="@drawable/bg_gradient"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/logo"
+                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:contentDescription="logo" />
+
+            <TextView
+                android:text="@string/add_group"
+                android:textColor="@color/color_accent"
+                android:textSize="22sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/group_img"
+        android:layout_below="@id/cardview"
+        android:src="@drawable/ic_group"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp"/>
+
+    <EditText
+        android:id="@+id/group_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_below="@id/group_img"
+        android:hint="@string/group_name_hint"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textColorHint="@color/color_primary"
+        android:autofillHints="" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/group_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_below="@id/group_name_et"
+        android:entries="@array/group_types"
+        android:prompt="@string/group_type"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save_group_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/group_type_spinner"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/button"
+        android:text="@string/save_group"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
